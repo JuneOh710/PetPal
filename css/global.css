@@ -269,7 +269,7 @@ footer {
 footer > * {
   display: flex;
   flex-direction: column;
-  padding: var(--padding-wide)
+  padding: var(--padding-wide);
 }
 
 .footer__nav {
@@ -382,6 +382,10 @@ footer > * {
     grid-template-rows: auto auto;
   }
 
+  footer > * {
+    padding: var(--padding-mid);
+  }
+
   .social_media {
     grid-column: 1;
     grid-row: 2;
@@ -409,6 +413,10 @@ footer > * {
   footer {
     grid-template-rows: auto auto auto;
     grid-template-columns: auto;
+  }
+
+  footer > * {
+    padding: var(--padding-narrow);
   }
 
   .social_media {
