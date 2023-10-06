@@ -1,0 +1,138 @@
+/* Styles for login and signup pages */
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: var(--padding-wide);
+}
+
+.main__wrapper {
+  width: 50%;
+  max-width: 32rem;
+}
+
+/* SEEKER/SHELTER TABS  */
+.login__menu {
+  width: 100%;
+  display: flex;
+}
+
+.login__menu-type {
+  width: 50%;
+  padding: var(--padding-narrow);
+  text-align: center;
+
+  border-radius: 1rem 1rem 0 0;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.login__menu-type.active {
+  background-color: var(--color-primary);
+}
+
+/* LOGIN FORM  */
+.login__wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-mid) var(--padding-extra);
+  
+  border-radius: 0 0 1rem 1rem;
+  background-image: linear-gradient(var(--color-primary), var(--color-dark));
+  color: var(--color-white);
+}
+
+.login__form-title {
+  hyphens: none;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  margin: var(--margin-narrow) 0;
+}
+
+.login__form > input {
+  padding: var(--padding-narrow) var(--padding-mid);
+  margin-bottom: var(--margin-mid);
+  
+  border-radius: 1.5rem;
+  text-align: center;
+}
+
+.login__form > a, /* Delete once form non-static */
+.login__form > button {
+  width: 50%;
+  align-self: center;
+  text-align: center; /* Delete once form non-static */
+}
+
+.login__form-instr {
+  align-self: center;
+}
+
+.login__form-instr > a {
+  color: var(--color-white);
+  text-decoration: underline;
+}
+
+/* SIGNUP FORM */
+.signup__form-field {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+}
+
+.signup__form-field > * {
+  margin-bottom: var(--margin-narrow);
+}
+
+.signup__form-field > input {
+  padding: var(--padding-narrow);
+  border-radius: 8px;
+}
+
+.signup__form-field + a, /* Delete once form non-static */
+.signup__form-field + button {
+  margin-top: var(--margin-wide);
+}
+
+/* SIGNUP SUCCESS */
+.login__wrapper.success {
+  border-radius: 1rem;
+  align-items: center;
+}
+
+/* SIGNUP FAILURE */
+.signup-error {
+  display: none;
+  margin: var(--margin-mid) 0;
+  padding: var(--padding-mid);
+  
+  border: 2px red solid;
+  border-radius: 1rem;
+  background-color: var(--color-warning);
+}
+
+.display {
+  display: block;
+}
+
+/* Tablets and ipads */
+@media (max-width: 52rem) { 
+  .main__wrapper {
+    width: 70%;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 36rem) {
+  .main__wrapper {
+    width: 100%;
+  }
+}
