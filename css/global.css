@@ -30,6 +30,7 @@
   --margin-mid: 1rem;
   --margin-narrow: 0.5rem;
 
+  --padding-extra: 2.5rem;
   --padding-wide: 1.5rem;
   --padding-mid: 1rem;
   --padding-narrow: 0.5rem;
@@ -101,7 +102,7 @@ p {
 .btn {
   display: inline-block;
   padding: var(--btn-padding, var(--btn-padding-default));
-  border-radius: 8px;
+  border-radius: 2rem;
   font-size: var(--font-size);
   cursor: pointer;
   appearance: none;
@@ -329,10 +330,6 @@ footer > * {
   flex: 1 0 auto;
   margin-right: var(--margin-narrow);
   padding: var(--padding-narrow) var(--padding-wide);
-  border-radius: 2rem;
-}
-
-#newsletter_form > button {
   border-radius: 2rem;
 }
 
