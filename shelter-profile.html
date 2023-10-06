@@ -86,37 +86,111 @@
             </nav>
         </header>
         <main>
-            <div class="profile-grid">
+            <div class="shelter-profile-grid">
                 <div class="profile-img">
-                    <div class="profile-container">
-                        <img class="rounded-full" src="/img/logo_ref.png" alt="profile-img">
+                    <div class="shelter-profile-container">
+                        <img src="/img/logo_ref.png" alt="profile-img">
                     </div>
-                    <input type="file" id="profile-image" name="profile-image" accept="image/*">
+                    <a href="edit-shelter-profile.html" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-md">Edit Profile</a>
                 </div>
                 <div class="profile-desc">
-                    <h2>Your Profile</h2>
+                    <h2>My Shelter</h2>
                     <hr class="line">
-                    <form class="profile-form" id="profile-form">
-                        <div class="mb-4">
-                            <label for="name" class="font-bold">Name:</label>
-                            <input type="text" id="name" name="name" class="w-full px-3 py-2 border rounded-lg" value="First Last" required>
+                    <ul class="profile-list">
+                        <li>
+                            <span class="font-bold">Shelter Name:</span>
+                            <span class="text-gray-700">South Shelter</span>
+                        </li>
+                        <li>
+                            <span class="font-bold">Email:</span>
+                            <span class="text-gray-700">
+                                <a href="123@123.com">shelter@123.com</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="font-bold">Address:</span>
+                            <span class="text-gray-700">
+                                <a>1234 Somewhere St. Toronto, ON</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="font-bold">Phone:</span>
+                            <span class="text-gray-700">
+                                <a>123-456-7890</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="font-bold">Mission Statement:</span>
+                            <span class="text-gray-700">
+                                <a>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="profile-pets">
+                    <div class="container mx-auto mb-4 px-5 py-2 lg:px-32 lg:pt-12 space-y-4">
+                        <div class="shelter-pet-list">
+                            <a class="text-xl font-bold center-text mr-4">Listed Pets</a>
+                            <i class="material-icons" id="add-pet">add</i>
                         </div>
-                        <div class="mb-4">
-                            <label for="email" class="font-bold">Email:</label>
-                            <input type="email" id="email" name="email" class="w-full px-3 py-2 border rounded-lg" value="123@123.com" required>
+                        
+                        <div class="-m-1 flex flex-wrap md:-m-2">
+                            <div class="flex w-full md:w-1/2 lg:w-1/3 p-1 md:p-2">
+                                <a href="pet1.html"> <!-- TODO HAVE THESE REDIRECT TO CORRECT PET PAGE-->
+                                    <img
+                                    alt="gallery"
+                                    class="block h-64 w-full rounded-lg object-cover object-center"
+                                    src="/img/logo_ref.png"
+                                    />
+                                </a>
+                            </div>
+                            <div class="flex w-full md:w-1/2 lg:w-1/3 p-1 md:p-2">
+                                <a href="pet2.html"> <!-- TODO HAVE THESE REDIRECT TO CORRECT PET PAGE-->
+                                    <img
+                                    alt="gallery"
+                                    class="block h-64 w-full rounded-lg object-cover object-center"
+                                    src="/img/logo_ref.png"
+                                    />
+                                </a>
+                            </div>
+                            <div class="flex w-full md:w-1/2 lg:w-1/3 p-1 md:p-2">
+                                <a href="pet3.html"> <!-- TODO HAVE THESE REDIRECT TO CORRECT PET PAGE-->
+                                    <img
+                                    alt="gallery"
+                                    class="block h-64 w-full rounded-lg object-cover object-center"
+                                    src="/img/logo_ref.png"
+                                    />
+                                </a>
+                            </div>
+                            <div class="flex w-full md:w-1/2 lg:w-1/3 p-1 md:p-2">
+                                <a href="pet4.html"> <!-- TODO HAVE THESE REDIRECT TO CORRECT PET PAGE-->
+                                    <img
+                                    alt="gallery"
+                                    class="block h-64 w-full rounded-lg object-cover object-center"
+                                    src="/img/logo_ref.png"
+                                    />
+                                </a>
+                            </div>
+                            <div class="flex w-full md:w-1/2 lg:w-1/3 p-1 md:p-2">
+                                <a href="pet5.html"> <!-- TODO HAVE THESE REDIRECT TO CORRECT PET PAGE-->
+                                    <img
+                                    alt="gallery"
+                                    class="block h-64 w-full rounded-lg object-cover object-center"
+                                    src="/img/logo_ref.png"
+                                    />
+                                </a>
+                            </div>
+                            <div class="flex w-full md:w-1/2 lg:w-1/3 p-1 md:p-2">
+                                <a href="pet6.html"> <!-- TODO HAVE THESE REDIRECT TO CORRECT PET PAGE-->
+                                    <img
+                                    alt="gallery"
+                                    class="block h-64 w-full rounded-lg object-cover object-center"
+                                    src="/img/logo_ref.png"
+                                    />
+                                </a>
+                            </div>
                         </div>
-                        <div class="mb-4">
-                            <label for="location" class="font-bold">Location:</label>
-                            <input type="text" id="location" name="location" class="w-full px-3 py-2 border rounded-lg" value="Toronto, ON" required>
-                        </div>
-                        <div class="mb-4">
-                            <label for="phone" class="font-bold">Phone:</label>
-                            <input type="tel" id="phone" name="phone" class="w-full px-3 py-2 border rounded-lg" value="123-456-7890" required>
-                        </div>
-                            <div class="mb-4">
-                            <button type="submit" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-3 rounded-full">Update Profile</button>
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </main>
@@ -146,6 +220,6 @@
         </footer>
     </div>
     <script src="scripts/dropdown.js"></script>
-    <script src="scripts/edit-profile.js"></script>
+    <script src="scripts/shelter.js"></script>
 </body>
 </html>
