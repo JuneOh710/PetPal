@@ -74,17 +74,3 @@ document.addEventListener('keydown', (event) => {
         accountButton.style.color = 'var(--color-white)';
     }
 });
-
-const profileImageInput = document.getElementById('profile-image');
-const profileImage = document.querySelector('.profile-img img');
-
-profileImageInput.addEventListener('change', (e) => {
-    const selectedImage = e.target.files[0]; // Get the selected file
-    if (selectedImage) {
-        const reader = new FileReader();
-        reader.onload = (event) => {
-        profileImage.src = event.target.result;
-        };
-        reader.readAsDataURL(selectedImage);
-    }
-});
