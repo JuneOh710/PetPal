@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PetPal - Home</title>
+  <title>PetPal - Sign Up</title>
 
   <!-- Import Fonts and Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,6 +16,7 @@
   <!-- Custom Styles -->
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/login-signup.css">
 </head>
 
 <body>
@@ -43,9 +44,60 @@
         </div>
       </nav>
     </header>
+
     <main>
-      <!-- TBD -->
+      <div class="main__wrapper">
+
+        <div class="signup-error" id="signup-error">
+          <p>Username already exists</p>
+        </div>
+
+        <div class="login__menu">
+          <button class="login__menu-type active" id="seeker">
+            <h6>Seeker</h6>
+          </button>
+          <button class="login__menu-type" id="shelter">
+            <h6>Shelter</h6>
+          </button>
+        </div>
+
+        <div class="login__wrapper">
+          <h5 class="login__form-title">Create an account</h5>
+          <!-- form does not submit anything anywhere for now -->
+          <form class="login__form" id="signup__form">
+            <div class="signup__form-field">
+              <label for="username">Username</label>
+              <input type="text" name="username" id="username" required>
+            </div>
+            <div class="signup__form-field">
+              <label for="firstname">First Name</label>
+              <input type="text" name="firstname" id="firstname" required>
+            </div>
+            <div class="signup__form-field">
+              <label for="lastname">Last Name</label>
+              <input type="text" name="lastname" id="lastname" required>
+            </div>
+            <div class="signup__form-field">
+              <label for="singup__email">Email</label>
+              <input type="email" name="singup__email" id="signup__email" required>
+            </div>
+            <div class="signup__form-field">
+              <label for="signup__pwd">Password</label>
+              <input type="password" name="signup__pwd" id="signup__pwd" required>
+            </div>
+            <div class="signup__form-field">
+              <label for="c__pwd">Confirm Password</label>
+              <input type="password" name="c__pwd" id="c__pwd" required>
+            </div>
+            
+            <button type="submit" value="signup" class="btn">Sign Up</button>
+          </form>          
+          <p class="login__form-instr">Already have an account? <a href="login.html">Login</a></p>
+        </div>
+
+      </div>
     </main>
+
     <footer>
       <nav class="footer__nav">
           <a href="#">Contact Us</a>
@@ -71,5 +123,6 @@
       </div>
     </footer>
   </div>
+  <script src="scripts/signup.js"></script>
 </body>
 </html>
