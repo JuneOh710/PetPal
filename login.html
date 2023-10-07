@@ -39,8 +39,8 @@
         </div>
         <div class="nav__icons">
           <i class="material-icons">search</i>
-          <i class="material-icons">notifications</i>
-          <i class="material-icons">account_circle</i>
+          <i class="material-icons" id="notification-button"><a href="login.html">notifications</a></i>
+          <i class="material-icons" id="account-button"><a href="login.html">account_circle</a></i>
         </div>
       </nav>
     </header>
@@ -48,14 +48,14 @@
       <div class="main__wrapper">
         <div class="login__menu" >
           <button class="login__menu-type active" id="seeker">
-            <h6>Seeker</h6>
+            <h6 class="h6">Seeker</h6>
           </button>
           <button class="login__menu-type" id="shelter">
-            <h6>Shelter</h6>
+            <h6 class="h6">Shelter</h6>
           </button>
         </div>
         <div class="login__wrapper">
-          <h4 class="login__form-title">Log In</h4>
+          <h4 class="login__form-title h4">Log In</h4>
           <form class="login__form" id="login__form">
             <input type="email" name="email" id="login__email" placeholder="Username/Email" required>
             <input type="password" name="password" id="login_pwd" placeholder="Password" required>            
@@ -81,7 +81,7 @@
         </div>
       </div>
       <div class="newsletter">
-        <h6>Newsletter</h6>
+        <h6 class="h6">Newsletter</h6>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <form action="javascript:void(0);" method="post" id="newsletter_form">
           <input type="email" name="email" id="email" placeholder="Your email..." required>

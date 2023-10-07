@@ -236,14 +236,16 @@ header {
 .nav__icons > * {
   font-size: 2.5rem;
   cursor: pointer;
+}
+
+i,
+i > a {
+  color: var(--color-white);
   transition: color 0.3s;
 }
 
-i {
-  color: var(--color-white);
-}
-
-i:hover {
+i:hover,
+i > a:hover {
   color: var(--color-secondary);
   font-weight: 500;
 }

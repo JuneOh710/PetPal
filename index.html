@@ -16,8 +16,9 @@
   <!-- Custom Styles -->
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/global.css">
+  
   <!-- For development purposes only -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 </head>
 
 <body>
@@ -39,48 +40,9 @@
           </ul>
         </div>
         <div class="nav__icons">
-          <i class="material-icons">search</i>
-          <i class="material-icons" id="notification-button">notifications</i>
-          <div class="absolute right-0 z-10 mt-2 w-70 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 hidden" role="menu" aria-orientation="vertical" aria-labelledby="notification-button" tabindex="-1" id="notification-dropdown">
-            <p class="text-2xl px-4 py-2">Notifications</p>
-            <div class="py-1 max-h-45 overflow-y-auto" role="none">
-              <ul>
-                <li class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">
-                  <a href="messages.html" class="block w-full h-full">
-                    <div class="w-10 h-10 mr-2">
-                      <img class="rounded-full" src="/img/logo_ref.png" alt="Image">
-                    </div>
-                    New listing in [insert location here].
-                  </a>
-                </li>
-                <li class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">
-                  <a href="messages.html" class="block w-full h-full">
-                    <div class="w-10 h-10 mr-2">
-                      <img class="rounded-full" src="/img/logo_ref.png" alt="Image">
-                    </div>
-                    You have a new message from Shelter1.
-                  </a>
-                </li>
-                <li class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">
-                  <a href="messages.html" class="block w-full h-full">
-                    <div class="w-10 h-10 mr-2">
-                      <img class="rounded-full" src="/img/logo_ref.png" alt="Image">
-                    </div>
-                    Welcome to PetPal!
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <i class="material-icons" id="account-button">account_circle</i>
-          <div class="absolute right-0 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 hidden" role="menu" aria-orientation="vertical" aria-labelledby="account-button" tabindex="-1" id="account-dropdown">
-            <div class="py-1" role="none">
-              <a href="profile.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1">My Profile</a>
-              <a href="messages.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1">Messages</a>
-              <a href="preferences.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1">Preferences</a>
-              <a href="logout.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1">Log Out</a>
-            </div>
-          </div>
+          <i class="material-icons">search</i>          
+          <i class="material-icons" id="notification-button"><a href="login.html">notifications</a></i>
+          <i class="material-icons" id="account-button"><a href="login.html">account_circle</a></i>
         </div>
       </nav>
     </header>

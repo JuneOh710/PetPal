@@ -39,8 +39,8 @@
         </div>
         <div class="nav__icons">
           <i class="material-icons">search</i>
-          <i class="material-icons">notifications</i>
-          <i class="material-icons">account_circle</i>
+          <i class="material-icons" id="notification-button"><a href="login.html">notifications</a></i>
+          <i class="material-icons" id="account-button"><a href="login.html">account_circle</a></i>
         </div>
       </nav>
     </header>
@@ -54,15 +54,15 @@
 
         <div class="login__menu">
           <button class="login__menu-type active" id="seeker">
-            <h6>Seeker</h6>
+            <h6 class="h6">Seeker</h6>
           </button>
           <button class="login__menu-type" id="shelter">
-            <h6>Shelter</h6>
+            <h6 class="h6">Shelter</h6>
           </button>
         </div>
 
         <div class="login__wrapper">
-          <h5 class="login__form-title">Create an account</h5>
+          <h5 class="login__form-title h5">Create an account</h5>
           <!-- form does not submit anything anywhere for now -->
           <form class="login__form" id="signup__form">
             <div class="signup__form-field">
@@ -114,7 +114,7 @@
         </div>
       </div>
       <div class="newsletter">
-        <h6>Newsletter</h6>
+        <h6 class="h6">Newsletter</h6>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <form action="javascript:void(0);" method="post" id="newsletter_form">
           <input type="email" name="email" id="email" placeholder="Your email..." required>
