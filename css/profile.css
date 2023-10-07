@@ -13,7 +13,6 @@ main {
         'profile-img profile-desc'
         'profile-favs profile-favs';
     width: 100%;
-    flex-grow: 1;
 }
 
 .shelter-profile-grid {
@@ -33,7 +32,6 @@ main {
     gap: 2rem;
     justify-content: center;
     align-items: center;
-    margin: 4rem;
 }
 
 .profile-container {
@@ -59,6 +57,10 @@ main {
     margin: 4rem;
 }
 
+.profile-list {
+    width: 100%;
+}
+
 .profile-list li {
     margin-bottom: 1rem;
     width: 60%;
@@ -78,31 +80,50 @@ main {
 
 .line {
     border: none;
-    width: 400px;
+    width: 50%;
     height: 2px; 
     background-color: #000;
     margin: 20px 0;
 }
 
-@media (max-width: 52rem) { 
+@media (max-width: 36rem) { 
     /* size for phone is basically the same */
     .profile-grid {
-        display: grid;
-        grid-template-areas: 
-            'profile-img'
-            'profile-desc'
-            'profile-favs';
+        display: flex;
+        flex-direction: column;
         width: 100%;
+        margin-top: 4rem;
         flex-grow: 1;
     }
 
+    .profile-desc {
+        grid-area: profile-desc;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 4rem;
+    }
+
+    .profile-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .line {
+        border: none;
+        width: 50%;
+        height: 2px; 
+        background-color: #000;
+        margin: 20px 0;
+    }
+
     .shelter-profile-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: 
-            'profile-img'
-            'profile-desc'
-            'profile-pets';
+        display: flex;
+        flex-direction: column;
+        margin-top: 4rem;
         width: 100%;
         flex-grow: 1;
     }
