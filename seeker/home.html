@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PetPal - Home</title>
+
+  <!-- Import Fonts and Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/home.css">
+  <link rel="stylesheet" href="/css/profile.css">
+  <!-- For development purposes only -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <a href="/seeker/home.html" class="logo">
+        <img src="/img/logo_ref.png">
+        <span>PetPal</span>
+      </a>
+      <nav class="header__nav">
+        <div class="nav__menu">
+          <label for="nav__menu-toggle"><div class="nav__hamburger"></div></label>
+          <input type="checkbox" name="nav__menu-toggle" id="nav__menu-toggle">          
+          <ul>
+            <li><a href="#" class="nav__link">My Applications</a></li>
+            <li><a href="/seeker/adopt.html" class="nav__link">Adopt</a></li>
+            <li><a href="/seeker/shelters.html" class="nav__link">Shelters</a></li>
+            <li><a href="#" class="nav__link">Donate</a></li>
+          </ul>
+        </div>
+        <div class="nav__icons">
+          <i class="material-icons" id="search-button">search</i>          
+          <div id="search-modal" class="hidden">
+            <form id="search__form">
+              <input type="text" name="search__text" id="search__text" placeholder="Search...">
+              <button type="submit" class="material-icons search-modal-icon">search</button> 
+            </form>
+          </div>
+          <i class="material-icons" id="notification-button">notifications</i>
+          <div class="absolute right-0 z-10 mt-2 w-70 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 hidden" role="menu" aria-orientation="vertical" aria-labelledby="notification-button" tabindex="-1" id="notification-dropdown">
+              <p class="text-2xl px-4 py-2">Notifications</p>
+              <div class="py-1 max-h-45 overflow-y-auto" role="none">
+                  <ul>
+                      <li class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">
+                          <a href="/seeker/messages.html" class="block w-full h-full">
+                              <div class="w-10 h-10 mr-2">
+                                  <img class="rounded-full" src="/img/logo_ref.png" alt="Image">
+                              </div>
+                              New listing in [insert location here].
+                          </a>
+                      </li>
+                      <li class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">
+                          <a href="/seeker/messages.html" class="block w-full h-full">
+                              <div class="w-10 h-10 mr-2">
+                                  <img class="rounded-full" src="/img/logo_ref.png" alt="Image">
+                              </div>
+                              You have a new message from Shelter1.
+                          </a>
+                      </li>
+                      <li class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">
+                          <a href="/seeker/messages.html" class="block w-full h-full">
+                              <div class="w-10 h-10 mr-2">
+                                  <img class="rounded-full" src="/img/logo_ref.png" alt="Image">
+                              </div>
+                              Welcome to PetPal!
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <i class="material-icons" id="account-button">account_circle</i>
+          <div class="absolute right-0 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 hidden" role="menu" aria-orientation="vertical" aria-labelledby="account-button" tabindex="-1" id="account-dropdown">
+            <div class="py-1" role="none">
+              <a href="/seeker/profile.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1">My Profile</a>
+              <a href="/seeker/messages.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1">Messages</a>
+              <a href="/seeker/preferences.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1">Preferences</a>
+              <a href="/" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1">Log Out</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="slider-wrapper">
+        <div class="slider" id="slider">
+          <!-- Image sources: https://unsplash.com/s/photos/pet-adoption -->
+          <div class="slide" id="slide-1">
+            <a href="#slide-1" class="slide-card"> <!-- These can link to blog posts / about us / anywhere -->
+              <h6 class="h6">Find your furever friend!</h6>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </a>
+          </div>
+          <div class="slide" id="slide-2">
+            <a href="#slide-2" class="slide-card">
+              <h6 class="h6">Find your furever friend!</h6>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </a>
+          </div>
+          <div class="slide" id="slide-3">
+            <a href="#slide-3" class="slide-card">
+              <h6 class="h6">Find your furever friend!</h6>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </a>
+          </div>
+          <div class="slide" id="slide-4">
+            <a href="#slide-4" class="slide-card">
+              <h6 class="h6">Find your furever friend!</h6>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </a>
+          </div>
+          <div class="slide" id="slide-5">
+            <a href="#slide-5" class="slide-card">
+              <h6 class="h6">Find your furever friend!</h6>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </a>
+          </div>
+          <div class="slide" id="slide-6">
+            <a href="#slide-6" class="slide-card">
+              <h6 class="h6">Find your furever friend!</h6>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </a>
+          </div>
+        </div>
+        <div class="slider-nav" id="slider-nav">
+          <a href="#slide-1"></a>
+          <a href="#slide-2"></a>
+          <a href="#slide-3"></a>
+          <a href="#slide-4"></a>
+          <a href="#slide-5"></a>
+          <a href="#slide-6"></a>
+        </div>
+      </section>
+
+      <section class="home__section-wrapper">
+        <a class="h5">Available for adoption</a>
+        <div class="card-wrapper">
+          <a href="/seeker/pet-list.html" class="card">
+            <img class="card-image" src="/img/dog-profile-2.png" alt="dog">
+            <p class="card-text">Dogs</p>
+          </a>
+          <a href="/seeker/pet-list.html" class="card">
+            <img class="card-image" src="/img/cat-profile-1.png" alt="cat">
+            <p class="card-text">Cats</p>
+          </a>
+          <a href="/seeker/pet-list.html" class="card">
+            <img class="card-image" src="/img/other-profile-1.png" alt="other">
+            <p class="card-text">Other</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="home__section-wrapper">
+        <a href="/seeker/shelters.html" class="h5">Shelters</a>
+        <div class="card-wrapper">
+          <div class="shelter-container">
+            <!--Image Source: https://www.mnpower.com/Company/MPJournal12202017-->
+            <img src="/img/pet-shelter.png">
+            <a href="/seeker/shelter-profile.html" class="shelter-overlay">
+              <p class="shelter-text">Shelter 1</p>
+            </a>
+          </div>
+          <div class="shelter-container">
+            <img src="/img/pet-shelter.png">
+            <a href="/seeker/shelter-profile.html" class="shelter-overlay">
+              <p class="shelter-text">Shelter 2</p>
+            </a>
+          </div>
+          <div class="shelter-container">
+            <img src="/img/pet-shelter.png">
+            <a href="/seeker/shelter-profile.html" class="shelter-overlay">
+              <p class="shelter-text">Shelter 3</p>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <nav class="footer__nav">
+          <a href="#">Contact Us</a>
+          <a href="#">Privcay Policy</a>
+          <a href="#">Terms of Service</a>
+      </nav>
+      <div class="social_media">
+        <p>Follow us at...</p>
+        <div class="social_media_icons">
+          <a href="#" class="fa-brands fa-facebook-square"></a>
+          <a href="#" class="fa-brands fa-instagram"></a>
+          <a href="#" class="fa-brands fa-square-x-twitter"></a>
+          <a href="#" class="fa-brands fa-tiktok"></a>
+        </div>
+      </div>
+      <div class="newsletter">
+        <h6 class="h6">Newsletter</h6>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <form action="javascript:void(0);" method="post" id="newsletter_form">
+          <input type="email" name="email" id="email" placeholder="Your email..." required>
+          <button type="submit" value="Subscribe" class="btn">Subscribe</button>
+        </form>
+      </div>
+    </footer>
+  </div>
+  <script src="/scripts/slider.js"></script>
+  <script src="/scripts/search-modal.js"></script>
+  <script src="/scripts/dropdown.js"></script>
+</body>
+</html>

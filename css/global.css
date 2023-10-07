@@ -555,6 +555,7 @@ footer > * {
 
 #notification-dropdown {
   font-weight: 500;
+  z-index: 3;
 }
 
 #notification-dropdown li:hover {
@@ -568,6 +569,7 @@ footer > * {
 
 #account-dropdown {
   font-weight: 500;
+  z-index: 3;
 }
 
 #account-dropdown a:hover {
