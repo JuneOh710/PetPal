@@ -40,7 +40,13 @@
                     </ul>                 
                 </div>
                 <div class="nav__icons">
-                    <i class="material-icons">search</i>
+                    <i class="material-icons" id="search-button">search</i>          
+                    <div id="search-modal" class="hidden">
+                        <form id="search__form">
+                            <input type="text" name="search__text" id="search__text" placeholder="Search...">
+                            <button type="submit" class="material-icons search-modal-icon">search</button> 
+                        </form>
+                    </div>
                     <i class="material-icons" id="notification-button">notifications</i>
                     <div class="absolute right-0 z-10 mt-2 w-70 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 hidden" role="menu" aria-orientation="vertical" aria-labelledby="notification-button" tabindex="-1" id="notification-dropdown">
                         <p class="text-2xl px-4 py-2">Notifications</p>
@@ -78,8 +84,7 @@
                         <div class="py-1" role="none">
                             <a href="profile.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1">My Profile</a>
                             <a href="messages.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1">Messages</a>
-                            <a href="preferences.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1">Preferences</a>
-                            <a href="logout.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1">Log Out</a>
+                            <a href="../index.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1">Log Out</a>
                         </div>
                     </div>
                 </div>
@@ -88,14 +93,13 @@
         <main>
             <div class="shelter-profile-grid">
                 <div class="profile-img">
-                    <div class="shelter-profile-container">
-                        <img src="../img/logo_ref.png" alt="profile-img">
+                    <div class="shelter-profile-container flex items-center justify-center">
+                        <img src="../img/shelter-1.jpg" alt="profile-img">
                     </div>
-                    <a href="review.html" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-md">Leave a review</a>
                 </div>
                 <div class="profile-desc">
                     <a class="font-semibold text-5xl">Shelter</a>
-                    <ul class="mb-0 flex items-center justify-center">
+                    <ul class="mb-0 mt-4 flex items-center justify-center">
                         <li>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -202,7 +206,7 @@
                                     <img
                                     alt="gallery"
                                     class="block h-64 w-full rounded-lg object-cover object-center"
-                                    src="../img/logo_ref.png"
+                                    src="../img/cat-profile-1.png"
                                     />
                                 </a>
                             </div>
@@ -211,7 +215,7 @@
                                     <img
                                     alt="gallery"
                                     class="block h-64 w-full rounded-lg object-cover object-center"
-                                    src="../img/logo_ref.png"
+                                    src="../img/cat-profile-2.png"
                                     />
                                 </a>
                             </div>
@@ -220,7 +224,7 @@
                                     <img
                                     alt="gallery"
                                     class="block h-64 w-full rounded-lg object-cover object-center"
-                                    src="../img/logo_ref.png"
+                                    src="../img/cat-profile-3.png"
                                     />
                                 </a>
                             </div>
@@ -229,7 +233,7 @@
                                     <img
                                     alt="gallery"
                                     class="block h-64 w-full rounded-lg object-cover object-center"
-                                    src="../img/logo_ref.png"
+                                    src="../img/dog-profile-1.png"
                                     />
                                 </a>
                             </div>
@@ -238,7 +242,7 @@
                                     <img
                                     alt="gallery"
                                     class="block h-64 w-full rounded-lg object-cover object-center"
-                                    src="../img/logo_ref.png"
+                                    src="../img/dog-profile-2.png"
                                     />
                                 </a>
                             </div>
@@ -247,13 +251,229 @@
                                     <img
                                     alt="gallery"
                                     class="block h-64 w-full rounded-lg object-cover object-center"
-                                    src="../img/logo_ref.png"
+                                    src="../img/dog-profile-3.png"
                                     />
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="container mx-auto mb-4 px-5 py-2 lg:px-32 lg:pt-12 space-y-4">
+                <a class="text-xl font-bold center-text mr-4">Reviews</a>
+                <div class="mx-auto block rounded-lg bg-white p-6 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 w-[60%]">
+                    <ul class="mb-0 flex items-center justify-center">
+                        <li class="text-base text-neutral-600 dark:text-neutral-200">Josh Joe: </li>
+                        <li>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="h-5 w-5 text-yellow-500">
+                                <path
+                                fill-rule="evenodd"
+                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                clip-rule="evenodd" />
+                            </svg>
+                        </li>
+                        <li>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="h-5 w-5 text-yellow-500">
+                                <path
+                                fill-rule="evenodd"
+                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                clip-rule="evenodd" />
+                            </svg>
+                        </li>
+                        <li>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="h-5 w-5 text-yellow-500">
+                                <path
+                                fill-rule="evenodd"
+                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                clip-rule="evenodd" />
+                            </svg>
+                        </li>
+                        <li>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="h-5 w-5 text-yellow-500">
+                                <path
+                                fill-rule="evenodd"
+                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                clip-rule="evenodd" />
+                            </svg>
+                        </li>
+                        <li>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="h-5 w-5 text-yellow-500">
+                                <path
+                                fill-rule="evenodd"
+                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                clip-rule="evenodd" />
+                            </svg>
+                        </li>
+                    </ul>
+                    <p class="text-base text-neutral-600 dark:text-neutral-200 text-center">
+                        Amazing!
+                    </p>
+                </div>
+                <div class="mx-auto block rounded-lg bg-white p-6 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 w-[60%]">
+                    <ul class="mb-0 flex items-center justify-center">
+                        <li class="text-base text-neutral-600 dark:text-neutral-200">Bob Bobby: </li>
+                        <li>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="h-5 w-5 text-yellow-500">
+                                <path
+                                fill-rule="evenodd"
+                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                clip-rule="evenodd" />
+                            </svg>
+                        </li>
+                        <li>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="h-5 w-5 text-yellow-500">
+                                <path
+                                fill-rule="evenodd"
+                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                clip-rule="evenodd" />
+                            </svg>
+                        </li>
+                        <li>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="h-5 w-5 text-yellow-500">
+                                <path
+                                fill-rule="evenodd"
+                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                clip-rule="evenodd" />
+                            </svg>
+                        </li>
+                        <li>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="h-5 w-5 text-yellow-500">
+                                <path
+                                fill-rule="evenodd"
+                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                clip-rule="evenodd" />
+                            </svg>
+                        </li>
+                        <li>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="h-5 w-5 text-yellow-500">
+                                <path
+                                fill-rule="evenodd"
+                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                clip-rule="evenodd" />
+                            </svg>
+                        </li>
+                    </ul>
+                    <p class="text-base text-neutral-600 dark:text-neutral-200 text-center">
+                        They even have Turtles!
+                    </p>
+                </div>
+                <div class="mx-auto block rounded-lg bg-white p-6 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 w-[60%]">
+                    <ul class="mb-0 flex items-center justify-center">
+                        <li class="text-base text-neutral-600 dark:text-neutral-200">John Doe: </li>
+                        <li>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="h-5 w-5 text-yellow-500">
+                                <path
+                                fill-rule="evenodd"
+                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                clip-rule="evenodd" />
+                            </svg>
+                        </li>
+                        <li>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="h-5 w-5 text-yellow-500">
+                                <path
+                                fill-rule="evenodd"
+                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                clip-rule="evenodd" />
+                            </svg>
+                        </li>
+                        <li>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="h-5 w-5 text-yellow-500">
+                                <path
+                                fill-rule="evenodd"
+                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                clip-rule="evenodd" />
+                            </svg>
+                        </li>
+                        <li>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="h-5 w-5 text-yellow-500">
+                                <path
+                                fill-rule="evenodd"
+                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                clip-rule="evenodd" />
+                            </svg>
+                        </li>
+                        <li>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="h-5 w-5 text-yellow-500">
+                                <path
+                                fill-rule="evenodd"
+                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                clip-rule="evenodd" />
+                            </svg>
+                        </li>
+                    </ul>
+                    <p class="text-base text-neutral-600 dark:text-neutral-200 text-center">
+                        Didn't realize I need a pet until I came here!
+                    </p>
+                </div>
+                <form class="mx-auto block rounded-lg bg-white p-6 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 w-[60%]">
+                    <p class="text-base text-neutral-600 dark:text-neutral-200 mb-4">
+                        Leave a review:
+                    </p>
+                    <textarea id="review" name="review" class="w-full px-3 py-4 border rounded-lg mb-4" required></textarea>
+                    <p class="text-base text-neutral-600 dark:text-neutral-200" id="rating-display">Rating: 5</p>
+                    <input type="range" id="rating" name="rating" min="1" max="5" step="1" value="5" class="w-full mb-4" required>
+                    <button type="submit" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-md">Leave a review</button>
+                </form>
             </div>
         </main>
         <footer>
@@ -282,5 +502,15 @@
         </footer>
     </div>
     <script src="../scripts/dropdown.js"></script>
+    <script>
+        const ratingInput = document.getElementById('rating');
+        const ratingDisplay = document.getElementById('rating-display');
+    
+        ratingInput.addEventListener('input', () => {
+            const selectedRating = ratingInput.value;
+            ratingDisplay.textContent = `Rating: ${selectedRating}`;
+        });
+    </script>
+    <script src="../scripts/search-modal.js"></script>
 </body>
 </html>
