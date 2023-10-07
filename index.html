@@ -16,9 +16,7 @@
   <!-- Custom Styles -->
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/global.css">
-  
-  <!-- For development purposes only -->
-  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <link rel="stylesheet" href="css/home.css">
 </head>
 
 <body>
@@ -46,9 +44,102 @@
         </div>
       </nav>
     </header>
+
     <main>
-      <!-- TODO -->
+      <section class="slider-wrapper">
+        <div class="slider" id="slider">
+          <!-- Image sources: https://unsplash.com/s/photos/pet-adoption -->
+          <div class="slide" id="slide-1">
+            <a href="#slide-1" class="slide-card"> <!-- These can link to blog posts / about us / anywhere -->
+              <h6 class="h6">Find your furever friend!</h6>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </a>
+          </div>
+          <div class="slide" id="slide-2">
+            <a href="#slide-2" class="slide-card">
+              <h6 class="h6">Find your furever friend!</h6>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </a>
+          </div>
+          <div class="slide" id="slide-3">
+            <a href="#slide-3" class="slide-card">
+              <h6 class="h6">Find your furever friend!</h6>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </a>
+          </div>
+          <div class="slide" id="slide-4">
+            <a href="#slide-4" class="slide-card">
+              <h6 class="h6">Find your furever friend!</h6>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </a>
+          </div>
+          <div class="slide" id="slide-5">
+            <a href="#slide-5" class="slide-card">
+              <h6 class="h6">Find your furever friend!</h6>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </a>
+          </div>
+          <div class="slide" id="slide-6">
+            <a href="#slide-6" class="slide-card">
+              <h6 class="h6">Find your furever friend!</h6>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </a>
+          </div>
+        </div>
+        <div class="slider-nav" id="slider-nav">
+          <a href="#slide-1"></a>
+          <a href="#slide-2"></a>
+          <a href="#slide-3"></a>
+          <a href="#slide-4"></a>
+          <a href="#slide-5"></a>
+          <a href="#slide-6"></a>
+        </div>
+      </section>
+
+      <section class="home__section-wrapper">
+        <a class="h5">Available for adoption</a>
+        <div class="card-wrapper">
+          <a href="login.html" class="card">
+            <img class="card-image" src="img/dog-profile-2.png" alt="dog">
+            <p class="card-text">Dogs</p>
+          </a>
+          <a href="login.html" class="card">
+            <img class="card-image" src="img/cat-profile-1.png" alt="cat">
+            <p class="card-text">Cats</p>
+          </a>
+          <a href="login.html" class="card">
+            <img class="card-image" src="img/other-profile-1.png" alt="other">
+            <p class="card-text">Other</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="home__section-wrapper">
+        <h5 class="h5">Shelters</h5>
+        <div class="card-wrapper">
+          <div class="shelter-container">
+            <!--Image Source: https://www.mnpower.com/Company/MPJournal12202017-->
+            <img src="img/pet-shelter.png">
+            <a href="login.html" class="shelter-overlay">
+              <p class="shelter-text">Shelter 1</p>
+            </a>
+          </div>
+          <div class="shelter-container">
+            <img src="img/pet-shelter.png">
+            <a href="login.html" class="shelter-overlay">
+              <p class="shelter-text">Shelter 2</p>
+            </a>
+          </div>
+          <div class="shelter-container">
+            <img src="img/pet-shelter.png">
+            <a href="login.html" class="shelter-overlay">
+              <p class="shelter-text">Shelter 3</p>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
+
     <footer>
       <nav class="footer__nav">
           <a href="#">Contact Us</a>
@@ -74,6 +165,6 @@
       </div>
     </footer>
   </div>
-  <script src="scripts/dropdown.js"></script>
+  <script src="scripts/slider.js"></script>
 </body>
 </html>
