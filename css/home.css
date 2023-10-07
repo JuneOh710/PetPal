@@ -35,22 +35,22 @@ main {
 }
 
 #slide-1 {
-  background-image: url(/img/gallery-1.png);  
+  background-image: url(../img/gallery-1.png);  
 }
 #slide-2 {
-  background-image: url(/img/gallery-2.png);  
+  background-image: url(../img/gallery-2.png);  
 }
 #slide-3 {
-  background-image: url(/img/gallery-3.png);  
+  background-image: url(../img/gallery-3.png);  
 }
 #slide-4 {
-  background-image: url(/img/gallery-4.png);  
+  background-image: url(../img/gallery-4.png);  
 }
 #slide-5 {
-  background-image: url(/img/gallery-5.png);  
+  background-image: url(../img/gallery-5.png);  
 }
 #slide-6 {
-  background-image: url(/img/gallery-6.png);  
+  background-image: url(../img/gallery-6.png);  
 }
 
 .slide-card {
