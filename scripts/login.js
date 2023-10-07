@@ -28,24 +28,3 @@ loginForm.addEventListener('submit', function (e) {
         window.location.href = 'shelter/home.html';
     }
 })
-
-// signup form validation
-const signupForm = document.getElementById('signup__form');
-
-signupForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-    
-    const username = document.getElementById("username");
-    
-    if (username.value == 'abc') {
-        const signupError = document.getElementById('signup-error');
-        signupError.classList.add("display");
-        return;
-    }
-    
-    if (!signupForm.checkValidity()) {
-        return;
-    }
-
-    window.location.href = 'signup-success.html';
-})

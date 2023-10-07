@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/home.css">
+  <!-- For development purposes only -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
@@ -38,7 +40,13 @@
           </ul>
         </div>
         <div class="nav__icons">
-          <i class="material-icons">search</i>          
+          <i class="material-icons" id="search-button">search</i>          
+          <div id="search-modal" class="hidden">
+            <form id="search__form">
+              <input type="text" name="search__text" id="search__text" placeholder="Search...">
+              <button type="submit" class="material-icons search-modal-icon">search</button> 
+            </form>
+          </div>
           <i class="material-icons" id="notification-button"><a href="login.html">notifications</a></i>
           <i class="material-icons" id="account-button"><a href="login.html">account_circle</a></i>
         </div>
@@ -100,15 +108,15 @@
         <a class="h5">Available for adoption</a>
         <div class="card-wrapper">
           <a href="login.html" class="card">
-            <img class="card-image" src="img/dog-profile-2.png" alt="dog">
+            <img class="card-image" src="/img/dog-profile-2.png" alt="dog">
             <p class="card-text">Dogs</p>
           </a>
           <a href="login.html" class="card">
-            <img class="card-image" src="img/cat-profile-1.png" alt="cat">
+            <img class="card-image" src="/img/cat-profile-1.png" alt="cat">
             <p class="card-text">Cats</p>
           </a>
           <a href="login.html" class="card">
-            <img class="card-image" src="img/other-profile-1.png" alt="other">
+            <img class="card-image" src="/img/other-profile-1.png" alt="other">
             <p class="card-text">Other</p>
           </a>
         </div>
@@ -119,19 +127,19 @@
         <div class="card-wrapper">
           <div class="shelter-container">
             <!--Image Source: https://www.mnpower.com/Company/MPJournal12202017-->
-            <img src="img/pet-shelter.png">
+            <img src="/img/pet-shelter.png">
             <a href="login.html" class="shelter-overlay">
               <p class="shelter-text">Shelter 1</p>
             </a>
           </div>
           <div class="shelter-container">
-            <img src="img/pet-shelter.png">
+            <img src="/img/pet-shelter.png">
             <a href="login.html" class="shelter-overlay">
               <p class="shelter-text">Shelter 2</p>
             </a>
           </div>
           <div class="shelter-container">
-            <img src="img/pet-shelter.png">
+            <img src="/img/pet-shelter.png">
             <a href="login.html" class="shelter-overlay">
               <p class="shelter-text">Shelter 3</p>
             </a>
@@ -166,5 +174,6 @@
     </footer>
   </div>
   <script src="scripts/slider.js"></script>
+  <script src="scripts/search-modal.js"></script>
 </body>
 </html>
