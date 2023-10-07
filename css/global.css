@@ -72,25 +72,25 @@ body {
 /* 
  * TYPOGRAPHY 
  */
-h1, h2, h3, h4, h5, h6 {
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-weight: 700;
 }
-h1 {
+h1, .h1 {
   font-size: var(--heading-1);
 }
-h2 {
+h2, .h2 {
   font-size: var(--heading-2);
 }
-h3 {
+h3, .h3 {
   font-size: var(--heading-3);
 }
-h4 {
+h4, .h4 {
   font-size: var(--heading-4);
 }
-h5 {
+h5, .h5 {
   font-size: var(--heading-5);
 }
-h6 {
+h6, .h6 {
   font-size: var(--heading-6);
 }
 p {
@@ -100,7 +100,8 @@ p {
 /* 
  * BUTTONS
  */
-.btn {
+.btn,
+[type=submit].btn {
   display: inline-block;
   padding: var(--btn-padding, var(--btn-padding-default));
   border-radius: 2rem;
@@ -325,6 +326,11 @@ footer > * {
   display: flex;
   flex-wrap: wrap;
 }
+
+/* #newsletter_title {
+  font-weight: 700;
+  font-size: var(--heading-6);
+} */
 
 #newsletter_form > * {
   margin: var(--margin-narrow) 0;
