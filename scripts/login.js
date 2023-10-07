@@ -23,8 +23,8 @@ loginForm.addEventListener('submit', function (e) {
     }
 
     if (x == 'seeker') {
-        window.location.href = 'seeker/home.html';
+        window.location.href = '/seeker/home.html';
     } else {
-        window.location.href = 'shelter/home.html';
+        window.location.href = '/shelter/home.html';
     }
 })

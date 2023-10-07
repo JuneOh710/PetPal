@@ -33,5 +33,5 @@ signupForm.addEventListener('submit', function (e) {
         return;
     }
 
-    window.location.href = 'signup-success.html';
+    window.location.href = '/signup-success.html';
 })
