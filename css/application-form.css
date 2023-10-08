@@ -1,0 +1,87 @@
+.main__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-container {
+    margin-top: 90px;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.form-content {
+    min-height: 800px;
+    width: 100%;
+    background-color: #F2F2F2;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 50px;
+    gap: 30px;
+}
+
+.btn-row {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.title {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.form-row {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    align-items: center;
+}
+
+.radio-group {
+    justify-content: space-evenly;
+}
+
+
+.full-input {
+    width: 100%;
+    overflow: hidden;
+}
+
+.full-input span {
+    display: block;
+    overflow: hidden;
+}
+.full-input input {
+    width: 100%;
+}
+.full-input label {
+    float: left;
+    margin-right: 10px;
+}
+
+.group-5 {
+    width: 50%;
+}
+
+.group-4 {
+    width: 40%;
+}
+
+.group-2 {
+    width: 20%;
+}
