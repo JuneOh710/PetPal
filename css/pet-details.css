@@ -17,7 +17,7 @@
 }
 
 
-.details-item.card {
+.details-item.pet-details-card {
     width: 100%;
     min-height: 300px;
     border-radius: 20px;
@@ -172,7 +172,7 @@
         margin-right: 20px;
     }
 
-    .details-item.card {
+    .details-item.pet-details-card {
         background-color: var(--color-white);
         margin: 0;
         padding: 0;
@@ -180,6 +180,11 @@
 
     .pet-profile-info {
         width: 100%;
+    }
+
+    .description-content {
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .row > div {
