@@ -93,7 +93,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="key">Status:</div>
-                                    <div class="value">Pending</div>
+                                    <div id="pet-status" class="value">Pending</div>
                                 </div>
                             </div>
                         </div>
@@ -113,10 +113,10 @@
                 </div>
 
                 <div class="details-item btn-container">
-                    <a id="contact-shelter-btn" class="btn square-btn">contact shelter</a>
-                    <a id="application-form-btn" class="btn" onclick="showWarning()">Application Form</a>
-                    <p id="pet-details-warning" class="hidden">This pet is currently unavailable.</p>
-                </div>
+                  <a id="contact-shelter-btn" class="btn square-btn">contact shelter</a>
+                  <a id="application-form-btn" class="btn" onclick="showWarning()">Application Form</a>
+                  <p id="pet-details-warning" class="hidden">This pet is currently unavailable.</p>
+              </div>
             </div>
         </div>
       </main>
@@ -151,21 +151,25 @@
         const applicationBtn = document.getElementById("application-form-btn");
 
         function showWarning() {
-            warning.classList.remove("hidden");
+          const petStatus = document.getElementById("pet-status");
+          if (petStatus.innerHTML === "Available") {
+            return;
+          }
+          warning.classList.remove("hidden");
 
-            shelterBtn.classList.add("hidden");
-            applicationBtn.classList.add("hidden");
+          shelterBtn.classList.add("hidden");
+          applicationBtn.classList.add("hidden");
 
-            setTimeout(() => {
-                hideWarning();
-            }, 1500);
+          setTimeout(() => {
+              hideWarning();
+          }, 1500);
         };
 
         function hideWarning() {
-            warning.classList.add("hidden");
+          warning.classList.add("hidden");
 
-            shelterBtn.classList.remove("hidden");
-            applicationBtn.classList.remove("hidden");
+          shelterBtn.classList.remove("hidden");
+          applicationBtn.classList.remove("hidden");
         }
     </script>
   </body>
