@@ -92,3 +92,18 @@ main {
 .btn {
     background-color: var(--color-primary);
 }
+
+@media (max-width: 800px) {
+    .main__wrapper {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        padding-top: 10px;
+    }
+    .page-title {
+        margin-bottom: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
