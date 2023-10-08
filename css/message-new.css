@@ -37,7 +37,7 @@ main {
     max-width: 800px;
 }
 
-form {
+#msg-form {
     background-color: #f2f2f2;
     display: flex;
     flex-direction: column;
@@ -80,4 +80,24 @@ textarea {
 label {
     text-align: baseline;
     font-size: 20px;
+}
+
+@media (max-width: 800px ) {
+    .main__wrapper {
+        width: 100%;
+        padding: 0 15px;
+    }
+    #msg-form {
+        background-color: var(--color-white);
+    }
+    .msg-container {
+        width: 100%;
+    }
+    .full-input span input {
+        background-color: var(--color-white);
+    }
+    #submit-btn {
+        align-self: center;
+        width: 80%;
+    }
 }
