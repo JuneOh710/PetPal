@@ -1,0 +1,231 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--padding-wide);
+  height: 100%;
+}
+
+main > * {
+  display: flex;
+  width: 100%;
+  /* border: 2px solid red; */
+  padding: var(--padding-narrow);
+  margin: var(--margin-narrow) 0;
+}
+
+/* Search Info Section */
+.search__title {
+  flex-direction: column;
+}
+
+#search__page-form {
+  display: flex;
+  margin: var(--margin-narrow) 0;
+}
+
+#search__page-text {
+  margin-right: var(--margin-narrow);
+  padding: var(--padding-narrow) var(--padding-mid);
+  border: 1px solid var(--color-grey);
+  border-radius: 2rem;
+  width: 30%;
+  min-width: 20rem;
+}
+
+.search__button:hover {
+  --btn-bg-color: var(--color-primary);
+  --btn-txt-color: var(--color-white);
+}
+
+/* Dropdown Menu */
+.search__sort {
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+
+.dropdown {
+  min-width: 12rem;
+  position: relative;
+  margin-left: var(--margin-narrow);
+}
+
+.select {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding: 0.2rem 0.5rem;
+  border: 2px solid var(--color-grey);
+  border-radius: 0.5rem;
+  color: var(--color-black);
+  background: white;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.select-clicked {
+  border: 2px solid var(--color-tertiary);
+  box-shadow: 0 0 0.8rem var(--color-grey);
+}
+
+.select:hover {
+  background: var(--color-tertiary);
+}
+
+.caret {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--color-black);
+  transition: 0.3s;
+}
+
+.caret-rotate {
+  transform: rotate(180deg);
+}
+
+.menu {
+  background: white;
+  border: 2px solid var(--color-grey);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  color: var(--color-black);
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  display: none;
+  opacity: 0;
+  transition: 0.2s;
+  z-index: 1;
+}
+
+.menu li {
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+}
+
+.menu li:hover {
+  background-color: var(--color-tertiary);
+}
+
+.active {
+  background-color: var(--color-tertiary);
+}
+
+.menu-open {
+  display: block;
+  opacity: 1;
+}
+
+/* Search Results */
+.search__results {
+  justify-content: space-around;
+  min-height: 100%;
+}
+
+/* Filters  */
+.filters__all {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--color-grey);
+  margin-right: var(--margin-wide);
+  min-width: 15rem;
+  padding: var(--padding-mid);
+
+  border-radius: 0.5rem;
+  background-color: white;
+}
+
+.multiselect {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--margin-mid);
+  border-top: 1px solid var(--color-grey);
+  padding: var(--padding-narrow) 0;
+  color: var(--color-black);
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  padding-left: var(--padding-mid);
+}
+
+.filter-option {
+  margin-top: var(--margin-narrow);
+  display: flex;
+  align-items: center;
+}
+
+.filter-option > *:last-child {
+  margin-left: var(--margin-narrow);
+}
+
+.filter-number {
+  display: flex;
+  justify-content: space-between;
+  padding-right: var(--margin-narrow);
+}
+
+input[type=number] {
+  border: 1px solid var(--color-grey);
+  border-radius: 5px;
+  padding: 0 0.4rem;
+}
+
+/* Results */
+.results__wrapper {
+  max-width: 56rem;
+  border-radius: 0.5rem;
+  padding: var(--padding-wide);
+  background-color: var(--color-tertiary);
+
+}
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  min-width: 10rem;
+}
+
+@media (max-width: 52rem) { 
+  #filter__toggle {
+    cursor: pointer;
+  }
+
+  .search__results {
+    flex-direction: column;
+  }
+  .filter__wrapper {
+    margin-bottom: var(--margin-wide);
+    /* order: 2; */
+  }
+  .filters__all {
+    margin-right: revert;
+  }
+}
+
+@media (max-width: 36rem) {
+  #search__page-form {
+    flex-direction: column;
+  }
+  #search__page-text {
+    width: 100%;
+    margin: var(--margin-narrow) 0;
+  }
+}

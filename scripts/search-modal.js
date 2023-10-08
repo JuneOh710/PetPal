@@ -31,9 +31,9 @@ searchForm.addEventListener('submit', (e) => {
     localStorage.setItem("search__text", search);
     
     if (identity == 'seeker') {
-        window.location.href = 'seeker/search.html';
+        window.location.href = 'search.html';
     } else if (identity == 'shelter') {
-        window.location.href = 'shelter/search.html';
+        window.location.href = 'search.html';
     } else {
         window.location.href = 'login.html';
     }
