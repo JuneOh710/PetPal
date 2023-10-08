@@ -12,11 +12,13 @@
     flex-direction: column;
     align-items: center;
     gap: 60px;
+    width: 80%;
+    max-width: 1000px;
 }
 
 
 .details-item.card {
-    width: 1000px;
+    width: 100%;
     min-height: 300px;
     border-radius: 20px;
     background-color: #F2F2F2;
@@ -142,4 +144,58 @@
 
 .value {
     width: 70%;
+}
+
+@media (max-width: 1000px) {
+    .pet-profile-container {
+        flex-direction: column;
+    }
+
+    .pet-profile-details {
+        width: 100%;
+    }
+
+    .pet-profile-photos {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .main__wrapper {
+        margin-top: 30px;
+    }
+
+    .details-container {
+        width: 100%;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .details-item.card {
+        background-color: var(--color-white);
+        margin: 0;
+        padding: 0;
+    }
+
+    .pet-profile-info {
+        width: 100%;
+    }
+
+    .row > div {
+        width: 100%;
+    }
+
+    .btn-container {
+        width: 100%;
+        flex-direction: column;
+        align-self: center;
+    }
+
+    a.btn {
+        width: 100%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        text-align: center;
+    }
 }
