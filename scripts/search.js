@@ -1,3 +1,6 @@
+const resultsUnsort = document.querySelector('.unsorted');
+const resultsSort = document.querySelector('.sorted');
+const resultsFilter = document.querySelector('.filtered');
 const dropdowns = document.querySelectorAll('.dropdown');
 
 dropdowns.forEach(dropdown => {
@@ -23,6 +26,16 @@ dropdowns.forEach(dropdown => {
                 option.classList.remove('active');
             });
             option.classList.add('active');
+
+            if (selected.innerText == "Date Uploaded") {
+                resultsUnsort.classList.add('hidden');
+                resultsSort.classList.remove('hidden');
+                resultsFilter.classList.add('hidden');
+            } else {
+                resultsUnsort.classList.remove('hidden');
+                resultsSort.classList.add('hidden');
+                resultsFilter.classList.add('hidden');
+            }
         });
     });
 });
@@ -79,4 +92,18 @@ mql.onchange = (e) => {
     }
 }
 
+// show filtered results if filter clicked
+const filterSelect = document.getElementById('color-black');
+
+filterSelect.addEventListener('change', () => {
+    if (filterSelect.checked) {
+        resultsUnsort.classList.add('hidden');
+        resultsSort.classList.add('hidden');
+        resultsFilter.classList.remove('hidden');
+    } else {
+        resultsUnsort.classList.remove('hidden');
+        resultsSort.classList.add('hidden');
+        resultsFilter.classList.add('hidden');
+    }
+});
 
