@@ -115,8 +115,8 @@ p {
 }
 
 .btn:hover {
-  background-color: var(--btn-txt-color, var(--btn-txt-color-default));
-  color: var(--btn-bg-color, var(--btn-bg-color-default));
+  background-color: var(--btn-bg-color, var(--btn-txt-color-default));
+  color: var(--btn-txt-color, var(--btn-bg-color-default));
 }
 
 a.btn {
