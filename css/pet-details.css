@@ -146,6 +146,14 @@
     width: 70%;
 }
 
+.hidden {
+    display: none;
+}
+
+#pet-details-warning {
+    color: var(--color-warning);
+}
+
 @media (max-width: 1000px) {
     .pet-profile-container {
         flex-direction: column;

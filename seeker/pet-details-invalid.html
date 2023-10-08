@@ -93,7 +93,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="key">Status:</div>
-                                    <div class="value">Available</div>
+                                    <div class="value">Pending</div>
                                 </div>
                             </div>
                         </div>
@@ -113,8 +113,9 @@
                 </div>
 
                 <div class="details-item btn-container">
-                    <a class="btn square-btn">contact shelter</a>
-                    <a class="btn">Application Form</a>
+                    <a id="contact-shelter-btn" class="btn square-btn">contact shelter</a>
+                    <a id="application-form-btn" class="btn" onclick="showWarning()">Application Form</a>
+                    <p id="pet-details-warning" class="hidden">This pet is currently unavailable.</p>
                 </div>
             </div>
         </div>
@@ -144,5 +145,28 @@
         </div>
       </footer>
     </div>
+    <script>
+        const warning = document.getElementById("pet-details-warning");
+        const shelterBtn = document.getElementById("contact-shelter-btn");
+        const applicationBtn = document.getElementById("application-form-btn");
+
+        function showWarning() {
+            warning.classList.remove("hidden");
+
+            shelterBtn.classList.add("hidden");
+            applicationBtn.classList.add("hidden");
+
+            setTimeout(() => {
+                hideWarning();
+            }, 1500);
+        };
+
+        function hideWarning() {
+            warning.classList.add("hidden");
+
+            shelterBtn.classList.remove("hidden");
+            applicationBtn.classList.remove("hidden");
+        }
+    </script>
   </body>
 </html>
