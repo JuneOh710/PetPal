@@ -103,6 +103,22 @@
     border: 2px solid var(--color-black);
 }
 
+.small-photo.add-photo {
+    border: 2px solid var(--color-grey);
+    fill: var(--color-grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-photo:hover {
+    background-color: white;
+    transition: 0.5s;
+}
+svg {
+    display: block;
+}
+
 .pet-profile-details {
     width: 50%;
     min-height: 100px;
@@ -136,6 +152,7 @@
 .row {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
 }
 
 .key {
@@ -154,6 +171,53 @@
     color: var(--color-warning);
 }
 
+/* shelter POV forms */
+.pet-profile-details.edit-mode {
+    align-items: center;
+}
+
+.pet-profile-header.edit-mode {
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+}
+
+.pet-profile-header.view-mode {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+}
+
+.pet-profile-header.view-mode > * {
+    margin: 0;
+}
+
+textarea.description-content {
+    padding: 10px 10px;
+    width: 90%;
+    height: 70%;
+    border-radius: 10px;
+}
+
+input {
+    border: 1px solid var(--color-grey);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+input.address {
+   margin-left: 0;
+}
+
+.pet-profile-header input {
+    padding-left: 10px;
+    display: block;
+    width: 80%;
+}
+
 @media (max-width: 1000px) {
     .pet-profile-container {
         flex-direction: column;
@@ -164,6 +228,14 @@
     }
 
     .pet-profile-photos {
+        width: 100%;
+    }
+
+    .pet-profile-header {
+        width: 80%;
+    }
+
+    .pet-profile-header input {
         width: 100%;
     }
 
@@ -184,6 +256,14 @@
         background-color: var(--color-white);
         margin: 0;
         padding: 0;
+    }
+
+    .pet-profile-header.edit-mode {
+        width: 100%;
+    }
+
+    .pet-profile-header.view-mode {
+        width: 100%;
     }
 
     .pet-profile-info {
@@ -210,5 +290,9 @@
         padding-top: 15px;
         padding-bottom: 15px;
         text-align: center;
+    }
+
+    textarea.description-content {
+        width: 100%;
     }
 }

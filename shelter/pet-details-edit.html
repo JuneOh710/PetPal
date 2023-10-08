@@ -45,10 +45,13 @@
         </nav>
       </header>
       <main>
-        <div class="main__wrapper">
+        <form class="main__wrapper" action="./pet-details.html">
             <div class="details-container">
+
+
                 <div class="details-item pet-details-card">
                     <div class="pet-profile-container">
+
                         <div class="pet-profile-photos">
                             <div class="photo main-photo">
                                 <img src="../img/logo_ref.png" alt="">
@@ -57,61 +60,64 @@
                                 <div class="photo small-photo selected"><img src="../img/logo_ref.png" alt=""></div>
                                 <div class="photo small-photo"><img src="../img/logo_ref.png" alt=""></div>
                                 <div class="photo small-photo"><img src="../img/logo_ref.png" alt=""></div>
-                                
+                                <a class="photo small-photo add-photo">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 24 24">
+                                        <path fill-rule="evenodd" d="M 11 2 L 11 11 L 2 11 L 2 13 L 11 13 L 11 22 L 13 22 L 13 13 L 22 13 L 22 11 L 13 11 L 13 2 Z"></path>
+                                    </svg>
+                                </a>
                             </div>
                         </div>
-                        <div class="pet-profile-details">
-                            <div class="pet-profile-header view-mode">
-                                <div class="title">Pet Name</div>
-                                <div class="address">1234 Nowhere St. Toronto, ON</div>
+
+                        <div class="pet-profile-details edit-mode">
+                            <div class="pet-profile-header edit-mode">
+                                    <input type="text" class="title" value="Doggo" required>
+                                    <input type="text" class="address" value="1234 Nowhere St. Toronto, ON" required>
                             </div>
                             <div class="pet-profile-info">
                                 <div class="row">
-                                    <div class="key">Shelter:</div>
-                                    <div class="value">Some Shelter</div>
+                                    <label for="shelter" class="key">Shelter:</label>
+                                    <input type="text" id="shelter" class="value" value="Some Shelter" required>
                                 </div>
                                 <div class="row">
-                                    <div class="key">Size:</div>
-                                    <div class="value">S</div>
+                                    <label for="size" class="key">Size:</label>
+                                    <input type="text" id="size" class="value" value="S" required>
                                 </div>
                                 <div class="row">
-                                    <div class="key">Breed:</div>
-                                    <div class="value">Maltipoo</div>
+                                    <label for="breed" class="key">Breed:</label>
+                                    <input type="text" id="breed" class="value" value="Maltipoo" required>
                                 </div>
                                 <div class="row">
-                                    <div class="key">Age:</div>
-                                    <div class="value">5</div>
+                                    <label for="age" class="key">Age:</label>
+                                    <input type="number" id="age" class="value" value="5" required>
                                 </div>
                                 <div class="row">
-                                    <div class="key">Sex:</div>
-                                    <div class="value">F</div>
+                                    <label for="sex" class="key">Sex:</label>
+                                    <input type="text" id="sex" class="value" value="F" required>
                                 </div>
                                 <div class="row">
-                                    <div class="key">Status:</div>
-                                    <div id="pet-status" class="value">Available</div>
+                                    <label for="status" class="key">Status:</label>
+                                    <input type="text" id="status" class="value" value="Available" required>
                                 </div>
                             </div>
                         </div>
+
+
                     </div>
                 </div>
                 
                 <div class="details-item pet-details-card">
-                    <div class="description-header">
+                    <label for="pet-description" class="description-header">
                         <div class="title">Description</div>
                         <div class="date">Published: 2023/10/07</div>
-                    </div>
-                    <div class="description-content">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab laudantium, aut sed recusandae repudiandae placeat nostrum earum quam incidunt nemo voluptatibus non inventore sint eos error quis voluptatum fugit exercitationem.
-                        Officiis neque eveniet cupiditate. Deleniti, nihil alias temporibus illo consectetur quidem? Ad possimus quidem excepturi deleniti sint commodi ipsam officia culpa saepe aperiam, dolores eos! Eos a cumque officiis neque.
-                        Consequatur maxime asperiores, natus consectetur blanditiis provident iste est magnam adipisci, temporibus expedita eos illum perferendis beatae quo. Odio quam consectetur soluta aperiam possimus modi tenetur. Veniam ea tempora nisi?
-                    </div>
+                    </label>
+                    <textarea required id="pet-description" name="pet-description" class="description-content" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab laudantium, aut sed recusandae repudiandae placeat nostrum earum quam incidunt nemo voluptatibus non inventore sint eos error quis voluptatum fugit exercitationem.Officiis neque eveniet cupiditate. Deleniti, nihil alias temporibus illo consectetur quidem? Ad possimus quidem excepturi deleniti sint commodi ipsam officia culpa saepe aperiam, dolores eos! Eos a cumque officiis neque. Consequatur maxime asperiores, natus consectetur blanditiis provident iste est magnam adipisci, temporibus expedita eos illum perferendis beatae quo. Odio quam consectetur soluta aperiam possimus modi tenetur. Veniam ea tempora nisi?</textarea>
                 </div>
 
                 <div class="details-item btn-container">
-                  <a class="btn" href="./pet-details-edit.html">Edit Pet</a>
+                  <input type="submit" value="Save Changes" class="btn" href="./pet-details.html">
               </div>
             </div>
-        </div>
+        </form>
       </main>
       <footer>
         <nav class="footer__nav">
@@ -139,4 +145,4 @@
       </footer>
     </div>
   </body>
-</html>
+</html
