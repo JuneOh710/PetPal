@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetPal</title>
+
+    <!-- Import Fonts and Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.css">
+
+    <!-- For development purposes only -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/pet-details.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <a href="home.html" class="logo">
+                <img src="../img/logo_ref.png">
+                <span>PetPal</span>
+            </a>
+            <nav class="header__nav">
+                <div class="nav__menu">
+                    <label for="nav__menu-toggle">
+                        <div class="nav__hamburger"></div>
+                    </label>
+                    <input type="checkbox" name="nav__menu-toggle" id="nav__menu-toggle">
+                    <ul>
+                        <li><a href="#" class="nav__link">My Applications</a></li>
+                        <li><a href="adopt.html" class="nav__link">Adopt</a></li>
+                        <li><a href="shelters.html" class="nav__link">Shelters</a></li>
+                        <li><a href="#" class="nav__link">Donate</a></li>
+                    </ul>
+                </div>
+                <div class="nav__icons">
+                    <i class="material-icons" id="search-button">search</i>
+                    <div id="search-modal" class="hidden">
+                        <form id="search__form">
+                            <input type="text" name="search__text" id="search__text" placeholder="Search...">
+                            <button type="submit" class="material-icons search-modal-icon">search</button>
+                        </form>
+                    </div>
+                    <i class="material-icons" id="notification-button">notifications</i>
+                    <div class="absolute right-0 z-10 mt-2 w-70 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 hidden"
+                        role="menu" aria-orientation="vertical" aria-labelledby="notification-button" tabindex="-1"
+                        id="notification-dropdown">
+                        <p class="text-2xl px-4 py-2">Notifications</p>
+                        <div class="py-1 max-h-45 overflow-y-auto" role="none">
+                            <ul>
+                                <li class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                                    id="menu-item-0">
+                                    <a href="messages.html" class="block w-full h-full">
+                                        <div class="w-10 h-10 mr-2">
+                                            <img class="rounded-full" src="../img/logo_ref.png" alt="Image">
+                                        </div>
+                                        New listing in [insert location here].
+                                    </a>
+                                </li>
+                                <li class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                                    id="menu-item-1">
+                                    <a href="messages.html" class="block w-full h-full">
+                                        <div class="w-10 h-10 mr-2">
+                                            <img class="rounded-full" src="../img/logo_ref.png" alt="Image">
+                                        </div>
+                                        You have a new message from Shelter1.
+                                    </a>
+                                </li>
+                                <li class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                                    id="menu-item-2">
+                                    <a href="messages.html" class="block w-full h-full">
+                                        <div class="w-10 h-10 mr-2">
+                                            <img class="rounded-full" src="../img/logo_ref.png" alt="Image">
+                                        </div>
+                                        Welcome to PetPal!
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <i class="material-icons" id="account-button">account_circle</i>
+                    <div class="absolute right-0 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 hidden"
+                        role="menu" aria-orientation="vertical" aria-labelledby="account-button" tabindex="-1"
+                        id="account-dropdown">
+                        <div class="py-1" role="none">
+                            <a href="profile.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
+                                tabindex="-1">My Profile</a>
+                            <a href="messages.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
+                                tabindex="-1">Messages</a>
+                            <a href="../index.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
+                                tabindex="-1">Log Out</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+      <main>
+        <div class="main__wrapper">
+            <div class="details-container">
+                <div class="details-item pet-details-card">
+                    <div class="pet-profile-container">
+                        <div class="pet-profile-photos">
+                            <div class="photo main-photo">
+                                <img src="../img/logo_ref.png" alt="">
+                            </div>
+                            <div class="photo-row">
+                                <div class="photo small-photo selected"><img src="../img/logo_ref.png" alt=""></div>
+                                <div class="photo small-photo"><img src="../img/logo_ref.png" alt=""></div>
+                                <div class="photo small-photo"><img src="../img/logo_ref.png" alt=""></div>
+                                
+                            </div>
+                        </div>
+                        <div class="pet-profile-details">
+                            <div class="pet-profile-header">
+                                <div>
+                                    <div class="title">Pumpkin</div>
+                                    <div class="address">1234 Nowhere St. Toronto, ON</div>
+                                </div>
+                                <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 61 54" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M30.5358 7.8639L27.3674 4.6955C21.1068 -1.56517 10.9562 -1.56517 4.69552 4.6955C-1.56517 10.9562 -1.56517 21.1068 4.69552 27.3675L30.4591 53.131L30.4644 53.1257L30.541 53.2024L56.3045 27.4389C62.5652 21.1782 62.5652 11.0277 56.3045 4.76703C50.044 -1.49367 39.8935 -1.49367 33.6328 4.76703L30.5358 7.8639ZM30.4644 44.8815L44.8525 30.4931L49.0813 26.4094L49.0856 26.4135L52.1823 23.3168C56.1666 19.3327 56.1666 12.8733 52.1823 8.88919C48.1984 4.90513 41.7388 4.90513 37.7549 8.88919L30.539 16.1051L30.5177 16.084L30.5148 16.0871L23.2453 8.81769C19.2612 4.8336 12.8017 4.8336 8.81768 8.81769C4.83359 12.8017 4.83359 19.2612 8.81768 23.2454L16.2196 30.6473L16.2249 30.642L30.4644 44.8815Z" fill="black"/>
+                                </svg>
+                            </div>
+                            <div class="pet-profile-info">
+                                <div class="row">
+                                    <div class="key">Shelter:</div>
+                                    <div class="value">South Shelter</div>
+                                </div>
+                                <div class="row">
+                                    <div class="key">Size:</div>
+                                    <div class="value">S</div>
+                                </div>
+                                <div class="row">
+                                    <div class="key">Breed:</div>
+                                    <div class="value">Maltipoo</div>
+                                </div>
+                                <div class="row">
+                                    <div class="key">Age:</div>
+                                    <div class="value">5</div>
+                                </div>
+                                <div class="row">
+                                    <div class="key">Sex:</div>
+                                    <div class="value">F</div>
+                                </div>
+                                <div class="row">
+                                    <div class="key">Status:</div>
+                                    <div id="pet-status" class="value">Available</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="details-item pet-details-card">
+                    <div class="description-header">
+                        <div class="title">Description</div>
+                        <div class="date">Published: 2023/10/07</div>
+                    </div>
+                    <div class="description-content">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab laudantium, aut sed recusandae repudiandae placeat nostrum earum quam incidunt nemo voluptatibus non inventore sint eos error quis voluptatum fugit exercitationem.
+                        Officiis neque eveniet cupiditate. Deleniti, nihil alias temporibus illo consectetur quidem? Ad possimus quidem excepturi deleniti sint commodi ipsam officia culpa saepe aperiam, dolores eos! Eos a cumque officiis neque.
+                        Consequatur maxime asperiores, natus consectetur blanditiis provident iste est magnam adipisci, temporibus expedita eos illum perferendis beatae quo. Odio quam consectetur soluta aperiam possimus modi tenetur. Veniam ea tempora nisi?
+                    </div>
+                </div>
+
+                <div class="details-item btn-container">
+                  <a id="contact-shelter-btn" class="btn square-btn">contact shelter</a>
+                  <a id="application-form-btn" class="btn" onclick="showWarning()">Application Form</a>
+                  <p id="pet-details-warning" class="hidden">This pet is currently unavailable.</p>
+              </div>
+            </div>
+        </div>
+      </main>
+      <footer>
+        <nav class="footer__nav">
+            <a href="#">Contact Us</a>
+            <a href="#">Privcay Policy</a>
+            <a href="#">Terms of Service</a>
+        </nav>
+        <div class="social_media">
+          <p>Follow us at...</p>
+          <div class="social_media_icons">
+            <a href="#" class="fa-brands fa-facebook-square"></a>
+            <a href="#" class="fa-brands fa-instagram"></a>
+            <a href="#" class="fa-brands fa-square-x-twitter"></a>
+            <a href="#" class="fa-brands fa-tiktok"></a>
+          </div>
+        </div>
+        <div class="newsletter">
+          <h6>Newsletter</h6>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <form action="javascript:void(0);" method="post" id="newsletter_form">
+            <input type="email" name="email" id="email" placeholder="Your email..." required>
+            <button type="submit" value="Subscribe" class="btn">Subscribe</button>          
+          </form>
+        </div>
+      </footer>
+    </div>
+    <script>
+        const warning = document.getElementById("pet-details-warning");
+        const shelterBtn = document.getElementById("contact-shelter-btn");
+        const applicationBtn = document.getElementById("application-form-btn");
+
+        function showWarning() {
+          const petStatus = document.getElementById("pet-status");
+          if (petStatus.innerHTML === "Available") {
+            return;
+          }
+          warning.classList.remove("hidden");
+
+          shelterBtn.classList.add("hidden");
+          applicationBtn.classList.add("hidden");
+
+          setTimeout(() => {
+              hideWarning();
+          }, 1500);
+        };
+
+        function hideWarning() {
+          warning.classList.add("hidden");
+
+          shelterBtn.classList.remove("hidden");
+          applicationBtn.classList.remove("hidden");
+        }
+    </script>
+    <script src="../scripts/dropdown.js"></script>
+    <script src="../scripts/search-modal.js"></script>
+  </body>
+</html>
