@@ -31,72 +31,61 @@
       </a>
       <nav class="header__nav">
         <div class="nav__menu">
-          <label for="nav__menu-toggle">
-            <div class="nav__hamburger"></div>
-          </label>
-          <input type="checkbox" name="nav__menu-toggle" id="nav__menu-toggle">
+          <label for="nav__menu-toggle"><div class="nav__hamburger"></div></label>
+          <input type="checkbox" name="nav__menu-toggle" id="nav__menu-toggle">          
           <ul>
-            <li><a href="#" class="nav__link">My Applications</a></li>
+            <li><a href="#" class="nav__link">My Pets</a></li>
             <li><a href="adopt.html" class="nav__link">Adopt</a></li>
             <li><a href="shelters.html" class="nav__link">Shelters</a></li>
             <li><a href="#" class="nav__link">Donate</a></li>
           </ul>
         </div>
         <div class="nav__icons">
-          <i class="material-icons" id="search-button">search</i>
+          <i class="material-icons" id="search-button">search</i>          
           <div id="search-modal" class="hidden">
             <form id="search__form">
               <input type="text" name="search__text" id="search__text" placeholder="Search...">
-              <button type="submit" class="material-icons search-modal-icon">search</button>
+              <button type="submit" class="material-icons search-modal-icon">search</button> 
             </form>
           </div>
           <i class="material-icons" id="notification-button">notifications</i>
-          <div
-            class="absolute right-0 z-10 mt-2 w-70 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 hidden"
-            role="menu" aria-orientation="vertical" aria-labelledby="notification-button" tabindex="-1"
-            id="notification-dropdown">
-            <p class="text-2xl px-4 py-2">Notifications</p>
-            <div class="py-1 max-h-45 overflow-y-auto" role="none">
-              <ul>
-                <li class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">
-                  <a href="messages.html" class="block w-full h-full">
-                    <div class="w-10 h-10 mr-2">
-                      <img class="rounded-full" src="../img/logo_ref.png" alt="Image">
-                    </div>
-                    New listing in [insert location here].
-                  </a>
-                </li>
-                <li class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">
-                  <a href="messages.html" class="block w-full h-full">
-                    <div class="w-10 h-10 mr-2">
-                      <img class="rounded-full" src="../img/logo_ref.png" alt="Image">
-                    </div>
-                    You have a new message from Shelter1.
-                  </a>
-                </li>
-                <li class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">
-                  <a href="messages.html" class="block w-full h-full">
-                    <div class="w-10 h-10 mr-2">
-                      <img class="rounded-full" src="../img/logo_ref.png" alt="Image">
-                    </div>
-                    Welcome to PetPal!
-                  </a>
-                </li>
-              </ul>
-            </div>
+          <div class="absolute right-0 z-10 mt-2 w-70 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 hidden" role="menu" aria-orientation="vertical" aria-labelledby="notification-button" tabindex="-1" id="notification-dropdown">
+              <p class="text-2xl px-4 py-2">Notifications</p>
+              <div class="py-1 max-h-45 overflow-y-auto" role="none">
+                  <ul>
+                      <li class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">
+                          <a href="messages.html" class="block w-full h-full">
+                              <div class="w-10 h-10 mr-2">
+                                  <img class="rounded-full" src="../img/logo_ref.png" alt="Image">
+                              </div>
+                              New listing in [insert location here].
+                          </a>
+                      </li>
+                      <li class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">
+                          <a href="messages.html" class="block w-full h-full">
+                              <div class="w-10 h-10 mr-2">
+                                  <img class="rounded-full" src="../img/logo_ref.png" alt="Image">
+                              </div>
+                              You have a new message from Shelter1.
+                          </a>
+                      </li>
+                      <li class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">
+                          <a href="messages.html" class="block w-full h-full">
+                              <div class="w-10 h-10 mr-2">
+                                  <img class="rounded-full" src="../img/logo_ref.png" alt="Image">
+                              </div>
+                              Welcome to PetPal!
+                          </a>
+                      </li>
+                  </ul>
+              </div>
           </div>
           <i class="material-icons" id="account-button">account_circle</i>
-          <div
-            class="absolute right-0 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 hidden"
-            role="menu" aria-orientation="vertical" aria-labelledby="account-button" tabindex="-1"
-            id="account-dropdown">
+          <div class="absolute right-0 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 hidden" role="menu" aria-orientation="vertical" aria-labelledby="account-button" tabindex="-1" id="account-dropdown">
             <div class="py-1" role="none">
-              <a href="profile.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1">My
-                Profile</a>
-              <a href="messages.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
-                tabindex="-1">Messages</a>
-              <a href="../index.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1">Log
-                Out</a>
+              <a href="shelter-profile.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1">My Profile</a>
+              <a href="messages.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1">Messages</a>
+              <a href="../index.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1">Log Out</a>
             </div>
           </div>
         </div>
