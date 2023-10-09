@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PetPal</title>
+    <title>PetPal - Application Filled</title>
 
     <!-- Import Fonts and Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,39 +17,85 @@
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/application-form.css">
+    <!-- For development purposes only -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
     <div class="wrapper">
-      <header>
-        <a href="/" class="logo">
-          <img src="/img/logo_ref.png">
-          <span>PetPal</span>
-        </a>
-        <nav class="header__nav">
-          <div class="nav__menu">
-            <label for="nav__menu-toggle"><div class="nav__hamburger"></div></label>
-            <input type="checkbox" name="nav__menu-toggle" id="nav__menu-toggle" readonly>          
-            <ul>
-              <li><a href="#" class="nav__link">About Us</a></li>
-              <li><a href="login.html" class="nav__link">Adopt</a></li>
-              <li><a href="login.html" class="nav__link">Shelters</a></li>
-              <li><a href="#" class="nav__link">Donate</a></li>
-            </ul>
-          </div>
-          <div class="nav__icons">
-            <i class="material-icons">search</i>
-            <i class="material-icons">notifications</i>
-            <i class="material-icons">account_circle</i>
-          </div>
-        </nav>
-      </header>
+        <header>
+            <a href="home.html" class="logo">
+                <img src="../img/logo_ref.png">
+                <span>PetPal</span>
+            </a>
+            <nav class="header__nav">
+                <div class="nav__menu">
+                    <label for="nav__menu-toggle"><div class="nav__hamburger"></div></label>
+                    <input type="checkbox" name="nav__menu-toggle" id="nav__menu-toggle">                    
+                    <ul>
+                        <li><a href="manage-applications.html" class="nav__link">My Applications</a></li>
+                        <li><a href="adopt.html" class="nav__link">Adopt</a></li>
+                        <li><a href="shelters.html" class="nav__link">Shelters</a></li>
+                        <li><a href="#" class="nav__link">Donate</a></li>
+                    </ul>
+                </div>
+                <div class="nav__icons">
+                    <i class="material-icons" id="search-button">search</i>          
+                    <div id="search-modal" class="hidden">
+                        <form id="search__form">
+                            <input type="text" name="search__text" id="search__text" placeholder="Search...">
+                            <button type="submit" class="material-icons search-modal-icon">search</button> 
+                        </form>
+                    </div>
+                    <i class="material-icons" id="notification-button">notifications</i>
+                    <div class="absolute right-0 z-10 mt-2 w-70 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 hidden" role="menu" aria-orientation="vertical" aria-labelledby="notification-button" tabindex="-1" id="notification-dropdown">
+                        <p class="text-2xl px-4 py-2">Notifications</p>
+                        <div class="py-1 max-h-45 overflow-y-auto" role="none">
+                            <ul>
+                                <li class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">
+                                    <a href="messages.html" class="block w-full h-full">
+                                        <div class="w-10 h-10 mr-2">
+                                            <img class="rounded-full" src="../img/logo_ref.png" alt="Image">
+                                        </div>
+                                        New listing in [insert location here].
+                                    </a>
+                                </li>
+                                <li class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">
+                                    <a href="messages.html" class="block w-full h-full">
+                                        <div class="w-10 h-10 mr-2">
+                                            <img class="rounded-full" src="../img/logo_ref.png" alt="Image">
+                                        </div>
+                                        You have a new message from Shelter1.
+                                    </a>
+                                </li>
+                                <li class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">
+                                    <a href="messages.html" class="block w-full h-full">
+                                        <div class="w-10 h-10 mr-2">
+                                            <img class="rounded-full" src="../img/logo_ref.png" alt="Image">
+                                        </div>
+                                        Welcome to PetPal!
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <i class="material-icons" id="account-button">account_circle</i>
+                    <div class="absolute right-0 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 hidden" role="menu" aria-orientation="vertical" aria-labelledby="account-button" tabindex="-1" id="account-dropdown">
+                        <div class="py-1" role="none">
+                            <a href="profile.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1">My Profile</a>
+                            <a href="messages.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1">Messages</a>
+                            <a href="../index.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1">Log Out</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
       <main>
         <div class="main__container">
-            <form action="./application-form.html" class="form-container">
+            <form action="./manage-applications.html" class="form-container" aria-readonly="true">
                 <div class="form-content">
                     <div class="title">
-                        Application Form
+                        My Application
                     </div>
                     <!-- first name, last name -->
                     <div class="form-row">
@@ -119,15 +165,15 @@
                         <label for="contact-preference">How do you prefer to be contacted?</label>
                         <div class="form-row radio-group">
                             <div>
-                                <input type="radio" id="phone-call" name="contact-preference" value="phone-call">
+                                <input type="radio" id="phone-call" name="contact-preference" value="phone-call" disabled>
                                 <label for="phone-call">Phone Call</label>
                             </div>
                             <div>
-                                <input type="radio" id="text" name="contact-preference" value="text">
+                                <input type="radio" id="text" name="contact-preference" value="text" disabled>
                                 <label for="text">Text</label>
                             </div>
                             <div>
-                                <input type="radio" id="email" name="contact-preference" value="email">
+                                <input type="radio" id="email" name="contact-preference" value="email" disabled>
                                 <label for="email">Email</label>
                             </div>
                         </div>
@@ -141,9 +187,9 @@
                     <div class="form-row">
                         <label>Do you have any children at home?</label>
                         <div>
-                            <input type="radio" id="yes" name="children" value="yes" readonly>
+                            <input type="radio" id="yes" name="children" value="yes" disabled>
                             <label for="yes">Yes</label>
-                            <input type="radio" id="no" name="children" value="no" readonly>
+                            <input type="radio" id="no" name="children" value="no" disabled>
                             <label for="no">No</label>
 
                         </div>
@@ -153,15 +199,15 @@
                         <label for="pet-experience">Choose which one best describes your experience with pets:</label>
                         <div class="form-row radio-group">
                             <div>
-                                <input type="radio" id="experienced" name="pet-experience" value="experienced" readonly>
+                                <input type="radio" id="experienced" name="pet-experience" value="experienced" disabled>
                                 <label for="experienced">Experienced</label>
                             </div>
                             <div>
-                                <input type="radio" id="intermediate" name="pet-experience" value="intermediate">
+                                <input type="radio" id="intermediate" name="pet-experience" value="intermediate" disabled>
                                 <label for="intermediate">Intermediate</label>
                             </div>
                             <div>
-                                <input type="radio" id="no-experience" name="pet-experience" value="no-experience">
+                                <input type="radio" id="no-experience" name="pet-experience" value="no-experience" disabled>
                                 <label for="no-experience">No Experience</label>
                             </div>
                         </div>
@@ -171,15 +217,15 @@
                         <label for="pet-experience">What type of residence do you currently live in?</label>
                         <div class="form-row radio-group">
                             <div>
-                                <input type="radio" id="condo" name="housing-type" value="Condo" readonly>
+                                <input type="radio" id="condo" name="housing-type" value="Condo" disabled>
                                 <label for="condo">Condo</label>
                             </div>
                             <div>
-                                <input type="radio" id="apartment" name="housing-type" value="Apartment">
+                                <input type="radio" id="apartment" name="housing-type" value="Apartment" disabled>
                                 <label for="apartment">Apartment</label>
                             </div>
                             <div>
-                                <input type="radio" id="house" name="housing-type" value="House">
+                                <input type="radio" id="house" name="housing-type" value="House" disabled>
                                 <label for="house">House</label>
                             </div>
                         </div>
@@ -189,7 +235,7 @@
                
 
                 <div class="btn-row">
-                    <a href="./message-new.html" id="msg-btn" class="btn">Message shelter</a>
+                    <a href="./message-history.html" id="msg-btn" class="btn">Message shelter</a>
                     <input id="submit-btn" class="btn" type="submit" value="Return" />
                 </div>
             </form>
@@ -231,6 +277,7 @@
             document.getElementById("phone").value = "555-123-4567";
             document.getElementById("user-email").value = "john.doe@example.com";
             document.getElementById("number-of-pets").value = "2";
+            document.getElementById("text").checked = true;
             document.getElementById("yes").checked = true; 
             document.getElementById("experienced").checked = true; 
             document.getElementById("house").checked = true;
@@ -238,5 +285,7 @@
 
         populateForm();
     </script>
+    <script src="../scripts/dropdown.js"></script>
+    <script src="../scripts/search-modal.js"></script>
   </body>
 </html>

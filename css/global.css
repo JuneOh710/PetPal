@@ -394,7 +394,7 @@ footer > * {
 
   .nav__hamburger {
     display: block;
-    z-index: 2;
+    z-index: 3;
   }
 
   .nav__menu {
@@ -413,7 +413,7 @@ footer > * {
     padding-top: calc(var(--header-height) + 2rem);
     width: 15rem;
     background-color: var(--color-primary);
-    z-index: 1;
+    z-index: 2;
   }
 
   #nav__menu-toggle:checked + ul {
