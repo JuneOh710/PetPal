@@ -1,8 +1,3 @@
-const addPetButton = document.getElementById("add-pet");
-addPetButton.addEventListener("click", function() {
-    window.location.href = "pet-details-create.html";
-});
-
 const shelterProfileForm = document.getElementById('shelter-profile-form');
 shelterProfileForm.addEventListener('submit', function (e) {
     e.preventDefault();
