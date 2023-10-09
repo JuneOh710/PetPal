@@ -12,6 +12,7 @@ main {
 
 .main__wrapper {
     margin-top: 40px;
+    margin-bottom: 20px;
     padding: 10px 30px;
     width: 80%;
     max-width: 800px;
@@ -41,17 +42,22 @@ main {
 }
 
 .msg-nav-item {
+    color: var(--color-black);
+    cursor: pointer;
     padding-top: 20px;
     padding-bottom: 10px;
     font-size: 30px;
     width: 50%;
     text-align: center;
-    border-bottom: 1px solid var(--color-black);
+    /* uncomment for figma design */
+    /* border-bottom: 1px solid var(--color-black); */
 }
 
-/* #inbox {
+.msg-nav-item:hover {
     background-color: var(--color-grey);
-} */
+    color: #f2f2f2;
+    transition: 0.2s;
+}
 
 #sent {
     border-left: 1px solid var(--color-black);
