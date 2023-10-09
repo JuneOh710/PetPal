@@ -96,6 +96,10 @@ main {
     justify-content: start;
 }
 
+.msg-preview {
+    color: #6e6e6e;
+}
+
 .msg-time {
     justify-self: end;
     margin-top: 20px;
