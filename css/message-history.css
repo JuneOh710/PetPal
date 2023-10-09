@@ -20,3 +20,23 @@
     align-self: flex-start;
     margin-right: 3rem;
 }
+
+.message-form {
+    width: 60%;
+}
+
+/* Mobile devices */
+@media (max-width: 52rem) {
+    .message-box {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        height: 100%;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .message-form {
+        width: 90%;
+    }
+}
