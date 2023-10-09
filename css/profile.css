@@ -86,6 +86,10 @@ main {
     margin: 20px 0;
 }
 
+.review-box {
+    width: 60%;
+}
+
 @media (max-width: 36rem) { 
     /* size for phone is basically the same */
     .profile-grid {
@@ -102,7 +106,9 @@ main {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 4rem;
+        margin: 0rem;
+        margin-top : 4rem;
+        margin-bottom: 4rem;
     }
 
     .profile-list {
@@ -126,6 +132,10 @@ main {
         margin-top: 4rem;
         width: 100%;
         flex-grow: 1;
+    }
+
+    .review-box {
+        width: 90%;
     }
 }
 
