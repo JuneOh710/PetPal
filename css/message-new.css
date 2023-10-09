@@ -74,6 +74,7 @@ textarea {
 }
 
 #submit-btn {
+    margin-top: var(--margin-narrow);
     align-self: flex-end;
 }
 
